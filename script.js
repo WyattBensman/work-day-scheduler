@@ -136,19 +136,21 @@ if (hour === 17) {
 
 
 // Event Listening
-const textBox = document.querySelector('#textBox-9')
-const saveButton = document.querySelector('#saveBtn-9')
+for (let i = 9; i <= 17; i++) {
+  let textBox = document.querySelector(`#textBox-${i}`)
+  let saveButton = document.querySelector(`#saveBtn-${i}`)
 
-window.addEventListener('load', () => {
-  const savedText = localStorage.getItem('savedText');
-  if (savedText) {
-    textBox.value = savedText;
-  }
-});
 
-saveButton.addEventListener('click', () => {
-  const enteredText = textBox.value;
-  console.log(enteredText);
+  window.addEventListener('load', () => {
+    let savedText = localStorage.getItem(`savedText-${i}`);
+    if (savedText) {
+      textBox.value = savedText;
+    }
+  });
 
-  localStorage.setItem('savedText', enteredText);
-})
+  saveButton.addEventListener('click', () => {
+    let enteredText = textBox.value;
+
+    localStorage.setItem(`savedText-${i}`, enteredText)
+  });
+}

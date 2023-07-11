@@ -41,7 +41,6 @@ currentDay.textContent = formattedDate;
 
 // Get Time
 let hour = currentDate.getHours();
-console.log(hour);
 
 // Time Block Selectors
 let nine = document.querySelector('#hour-9')

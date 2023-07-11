@@ -135,3 +135,20 @@ if (hour === 17) {
 }
 
 
+// Event Listening
+const textBox = document.querySelector('#textBox-9')
+const saveButton = document.querySelector('#saveBtn-9')
+
+window.addEventListener('load', () => {
+  const savedText = localStorage.getItem('savedText');
+  if (savedText) {
+    textBox.value = savedText;
+  }
+});
+
+saveButton.addEventListener('click', () => {
+  const enteredText = textBox.value;
+  console.log(enteredText);
+
+  localStorage.setItem('savedText', enteredText);
+})

@@ -38,3 +38,7 @@ let dayOfMonth = currentDate.getDate();
 // Create & Add string
 let formattedDate = `${dayOfWeek}, ${month} ${dayOfMonth}`;
 currentDay.textContent = formattedDate;
+
+// Get Time
+let hour = currentDate.getHours();
+console.log(hour);

@@ -21,3 +21,20 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+let currentDay = document.querySelector('#currentDay')
+
+// Get Current Date
+let currentDate = new Date();
+// Get Day of Week
+let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+let dayOfWeek = daysOfWeek[currentDate.getDay()];
+// Get Month
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+let month = months[currentDate.getMonth()];
+// Get day of the month
+let dayOfMonth = currentDate.getDate();
+
+// Create & Add string
+let formattedDate = `${dayOfWeek}, ${month} ${dayOfMonth}`;
+currentDay.textContent = formattedDate;

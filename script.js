@@ -134,7 +134,6 @@ if (hour === 17) {
   five.classList.add("future");
 }
 
-
 // Event Listening
 for (let i = 9; i <= 17; i++) {
   let textBox = document.querySelector(`#textBox-${i}`)
